@@ -1,0 +1,35 @@
+html, body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #99CFBA;
+}
+section.hero {
+  height: 100%;
+  background-image: linear-gradient(162deg, #99CFBA 0%, rgba(76,131,113,0.82) 89%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.logo {
+  margin-top: auto;
+  @media (max-width: 414px) {
+    padding: 0 20px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.notice {
+  a {
+    display: block;
+  }
+  margin: auto 25px 20px auto;
+  @media (max-width: 414px) {
+    margin: auto auto 20px auto;
+  }
+}
+
