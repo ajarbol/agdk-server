@@ -7,7 +7,6 @@ require('babel-polyfill');
 
 // Require keystone
 const keystone = require('keystone');
-const routes = require('./routes');
 
 keystone.init({
 	'name': 'Autisme Guiden',
@@ -24,6 +23,9 @@ keystone.init({
 	'auth': true,
 	'user model': 'Admin',
 	'admin path': 'admin',
+	'wysiwyg additional options': { paste_as_text: true },
+	'wysiwyg additional plugins': 'paste',
+	'wysiwyg additional buttons': 'fontsizeselect',
 });
 keystone.import('models');
 keystone.set('locals', {
@@ -32,7 +34,7 @@ keystone.set('locals', {
 	utils: keystone.utils,
 	editable: keystone.content.editable,
 });
-keystone.set('routes', routes.default);
+keystone.set('routes', require('./routes').default);
 
 keystone.set('nav', {
 	users: 'admins',
