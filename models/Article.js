@@ -38,5 +38,5 @@ Article.schema.pre('save', function (next) {
 /**
  * Registration
  */
-Article.defaultColumns = 'title, updatedAt';
+Article.defaultColumns = 'title, section, updatedAt';
 Article.register();
